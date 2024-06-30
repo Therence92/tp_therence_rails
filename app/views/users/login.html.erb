@@ -1,12 +1,26 @@
-<h1>Connexion</h1>
-<%= form_with url: "/login", local: true do %>
-  <div class="form-group">
-    <%= label_tag :email %>
-    <%= email_field_tag :email, nil, class: "form-control" %>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header text-center bg-primary text-white">
+          <h1>Connexion</h1>
+        </div>
+        <div class="card-body">
+          <%= form_with url: "/login", local: true do %>
+            <div class="form-group mb-3">
+              <%= label_tag :email %>
+              <%= email_field_tag :email, nil, class: "form-control" %>
+            </div>
+            <div class="form-group mb-3">
+              <%= label_tag :password %>
+              <%= password_field_tag :password, nil, class: "form-control" %>
+            </div>
+            <div class="text-center">
+              <%= submit_tag "Connexion", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <%= label_tag :password %>
-    <%= password_field_tag :password, nil, class: "form-control" %>
-  </div>
-  <%= submit_tag "Connexion", class: "btn btn-primary" %>
-<% end %>
+</div>

@@ -3,3 +3,5 @@ import "@hotwired/turbo-rails"
 import "controllers"
 //= require bootstrap.bundle.min
 //= require_tree .
+import "bootstrap"
+import "@popperjs/core"
